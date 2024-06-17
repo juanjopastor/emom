@@ -5,7 +5,8 @@ const resetButton = document.getElementById('resetButton');
 const estadoElement = document.getElementById('estado');
 
 const slider = document.getElementById('slider');
-const sliderValueElement = document.getElementById('slider-value');/* Estilos para los botones */
+const increaseButton = document.getElementById('increaseButton');
+const decreaseButton = document.getElementById('decreaseButton');
 
 let intervalId;
 let prevSeconds = 5;
@@ -105,7 +106,33 @@ slider.addEventListener('input', () => {
     const trabajo = parseInt(slider.value, 10);
     totalSeconds = (trabajo * 60) + prevSeconds;
     resetTimer(); // Reinicia el cronómetro con el nuevo valor
-    sliderValueElement.textContent = trabajo; // Actualiza el valor visible
+});
+
+// Función para actualizar el valor del control deslizante
+function updateSliderValue() {
+    const currentMinutes = parseInt(slider.value);
+    slider.value = currentMinutes; // Actualizar el valor visible
+    const trabajo = parseInt(slider.value, 10);
+    totalSeconds = (trabajo * 60) + prevSeconds;
+    resetTimer(); // Reinicia el cronómetro con el nuevo valor
+}
+
+// Evento para el botón "+"
+increaseButton.addEventListener('click', () => {
+    const currentMinutes = parseInt(slider.value);
+    if (currentMinutes < 60) {
+        slider.value = currentMinutes + 1;
+        updateSliderValue(); // Actualizar el control deslizante
+    }
+});
+
+// Evento para el botón "-"
+decreaseButton.addEventListener('click', () => {
+    const currentMinutes = parseInt(slider.value);
+    if (currentMinutes > 1) {
+        slider.value = currentMinutes - 1;
+        updateSliderValue(); // Actualizar el control deslizante
+    }
 });
 
 startButton.addEventListener('click', startTimer);

@@ -72,6 +72,26 @@ h1 {
 }
 
 /* Estilos para los botones */
+#increaseButton, #decreaseButton {
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #4CAF50; /* Verde */
+    color: white; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición de color */
+}
+
+#increaseButton:hover { /* Efecto hover para el botón "+" */
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+#decreaseButton:hover { /* Efecto hover para el botón "-" */
+    background-color: #dc3545; /* Rojo */
+}
+
+/* Estilos para los botones */
 #startButton, #stopButton, #resetButton {
     font-size: 18px; /* Aumenta el tamaño de la fuente */
     padding: 10px 20px; /* Aumenta el padding interno */
