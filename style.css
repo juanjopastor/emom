@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+/* Contenedor principal */
+#app {
+    width: 400px; /* Ajusta el ancho */
+    margin: 80px auto; /* Margen superior e inferior */
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+/* Título */
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Cronómetro */
+#timer {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#minutes, #seconds {
+    display: inline-block;
+    margin: 0 10px; /* Espacio entre dígitos */
+}
+
+/* Slider */
+#config {
+    margin-top: 20px;
+}
+
+#slider {
+    width: 250px; /* Ajusta el ancho */
+    margin: 15px 0;
+    appearance: none; /* Ocultar estilos predeterminados */
+    height: 10px; /* Altura del slider */
+    background: #444; /* Color de la pista */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Indicador de cursor */
+
+    ::-webkit-slider-thumb { /* Estilo del botón deslizante (Chrome/Safari) */
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%; /* Botón circular */
+        background: #fff; /* Color del botón */
+        cursor: pointer;
+    }
+
+    ::-moz-range-thumb { /* Estilo del botón deslizante (Firefox) */
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+    }
+}
+
+#slider-value {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilos para los botones */
+#startButton, #stopButton, #resetButton {
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    padding: 10px 20px; /* Aumenta el padding interno */
+    border-radius: 10px; /* Bordes redondeados con radio de 10px */
+    border: none; /* Elimina el borde predeterminado */
+    cursor: pointer; /* Indicador de cursor al pasar el mouse */
+}
