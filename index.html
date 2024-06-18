@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronómetro EMOM</title>
+    <title>EMOM Timer</title>
     <link rel="stylesheet" href="style.css"> </head>
 <body>
     <div id="app">
-        <h2>Cronómetro EMOM</h2>
+        <h2>EMOM Timer</h2>
 
         <div id="timer">
             <span id="minutes">01</span>:<span id="seconds">05</span>
         </div>
 
         <div id="controls">
-            <button id="startButton">Iniciar</button>
-			<button id="stopButton" disabled="true">Parar</button>
-            <button id="resetButton" disabled="true">Reiniciar</button>
+            <button id="startButton">Start</button>
+			<button id="stopButton" disabled="true">Stop</button>
+            <button id="resetButton" disabled="true">Reset</button>
         </div>
 
 		<div id="config">
 			<div id="config">
-				<label for="slider">Minutos de trabajo:</label>
+				<label for="slider">Workout time:</label>
 				<input type="range" id="slider" min="1" max="60" value="1">
                 <button id="increaseButton">+</button>
                 <button id="decreaseButton">-</button>
@@ -29,7 +29,7 @@
 		</div>
 
         <div id="status">
-            <p>Estado: <span id="estado">Preparado</span></p>
+            <p>State: <span id="state">Ready</span></p>
         </div>
     </div>
 
