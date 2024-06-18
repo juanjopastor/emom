@@ -8,7 +8,8 @@ body {
 
 /* Contenedor principal */
 #app {
-    width: 400px; /* Ajusta el ancho */
+    max-width: 300px;
+    width: 100%; /* Ajusta el ancho */
     margin: 80px auto; /* Margen superior e inferior */
     padding: 30px;
     border: 1px solid #333;
@@ -91,11 +92,24 @@ h1 {
     background-color: #dc3545; /* Rojo */
 }
 
-/* Estilos para los botones */
-#startButton, #stopButton, #resetButton {
-    font-size: 18px; /* Aumenta el tamaño de la fuente */
-    padding: 10px 20px; /* Aumenta el padding interno */
-    border-radius: 10px; /* Bordes redondeados con radio de 10px */
-    border: none; /* Elimina el borde predeterminado */
+/* Estilos para los botones "+" y "-" */
+#increaseButton, #decreaseButton {
+    font-size: 24px; /* Aumenta el tamaño de la fuente */
+    padding: 15px 20px; /* Aumenta el padding interno */
+    width: 50px; /* Aumenta el ancho de los botones */
+    height: 50px; /* Aumenta la altura de los botones */
+    border: none; /* Elimina el borde por defecto */
     cursor: pointer; /* Indicador de cursor al pasar el mouse */
+    background-color: #4CAF50; /* Verde */
+    color: white; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición de color */
+}
+
+#increaseButton:hover { /* Efecto hover para el botón "+" */
+    background-color: #dc3545; /* Verde más oscuro */
+}
+
+#decreaseButton:hover { /* Efecto hover para el botón "-" */
+    background-color: #dc3545; /* Rojo */
 }

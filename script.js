@@ -69,7 +69,7 @@ function startTimer() {
         }
     }, 1000); // 1 segundo = 1000 milisegundos
 
-    startButton.disabled = true;
+    startButton.disabled = increaseButton.disabled = decreaseButton.disabled = true;
 	startButton.textContent = "Reanudar";
     resetButton.disabled = false;
 	stopButton.disabled = false;
@@ -84,7 +84,7 @@ function stopTimer() {
     estadoElement.textContent = estado;
 
     // Deshabilitar los botones de iniciar y reiniciar
-    startButton.disabled = false;
+    startButton.disabled = increaseButton.disabled = decreaseButton.disabled = false;
 	stopButton.disabled = true;
     resetButton.disabled = false;
 	slider.disabled = true;
@@ -95,7 +95,7 @@ function resetTimer() {
     currentSeconds = totalSeconds;
     updateDisplay();
 
-    startButton.disabled = false;
+    startButton.disabled = increaseButton.disabled = decreaseButton.disabled = false;
 	stopButton.disabled = true;
     resetButton.disabled = true;
 	slider.disabled = false;
